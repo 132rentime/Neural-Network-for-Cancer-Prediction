@@ -7,4 +7,4 @@ The neural netork has 1 output layer, 1 input layer and 1 hidden layer. The inpu
 
 Principal componenent analysis shows that we need only 2 principal components to capture all the 9 variables with 99% variance or more, hence the PCA images are also plotted and presented in the Master branch. 
 
-The neural network is trained using a Training set which is 60% of the total dataset. It is seen that with a lambda value of 0.1, 
+The neural network is trained using a Training set which is 60% of the total dataset. It is seen that with a lambda value of 0.1, Training set accuracy is 86.25% and Test set accuracy is 81.25%
