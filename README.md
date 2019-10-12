@@ -4,5 +4,7 @@ Relevant research paper : https://bmccancer.biomedcentral.com/articles/10.1186/s
 
 Master branch of Neural Network;
 The neural netork has 1 output layer, 1 input layer and 1 hidden layer. The input layer consists of 9 input variables(including bias unit there will be 10 variables). The hidden layer consists of 3 activation nodes. The output layer has just one output as the output is binary(Cancer or no Cancer).
-Pricipal componenent analysis shows that we need only 2 principal components to capture all the 9 variables with 99% variance or more, hence the PCA images are also plotted and presented in the Master branch. 
+
+Principal componenent analysis shows that we need only 2 principal components to capture all the 9 variables with 99% variance or more, hence the PCA images are also plotted and presented in the Master branch. 
+
 The neural network is trained using a Training set which is 60% of the total dataset. It is seen that with a lambda value of 0.1, 
