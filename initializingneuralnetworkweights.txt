@@ -1,0 +1,50 @@
+Initializing neural network weights
+
+Randomly initializing weights in a neural network
+
+For symmetry breaking, it is important to randmoly initialize your weights. 
+
+We select an initialization epsilon which is equal to (sqrt(6)/(sqrt(Lin + Lout))
+
+Where Lin is the number of activation nodes in the S(l) layer and Lout is the number of 
+activation nodes in the S(l+1) layer.
+
+epsilon_init = 0.12;
+W = rand(L_out,1 + L_in) * 2 * epsilon_init - epsilon_init
+
+Regularizing the delta of each layer;
+After adding the gradient layer to Theta1/2_grad, extract Theta1/2_grad(:,2:end) and add it to Theta1/2(:,2:end)
+Then add it back again to Theta1/2_grad(:,1)
+
+Gradient checking
+Before the numerical gradient check is itself carried out, we carry
+out a test on our cost function. 
+We select some random X values, Theta values and Y values, and pass it
+to the cost function we just made. 
+This cost function is then used to get the cost and the gradient vector. 
+Then we pass the same cost function handle we made into the numerical gradient 
+calculation, where we just use the cost(NOT THE GRADIENT VECTOR), for each 
+pertubation point within the thatas. 
+% numgrad = COMPUTENUMERICALGRADIENT(J, theta) computes the numerical
+%   gradient of the function J around theta
+
+The cost function is passed into the numerical gradient calculating function.
+
+
+(The numerical gradient part)
+FOR THE NUMERICAL GRADIENT CALCULATION FUNCTION, WE PASS IN THE 
+COST FUNCTION HANDLE OF THE COST FUNCTION. 
+We pass the function handle containing theta, X, y, lambda into it.
+The function handle is the cost function which we already made earlier.
+Then we create 2 vectors, both the size of theta
+For each theta, one theta value at a time, we add and subsract the perturb value.
+Then we calculate the cost for the 2 perturbed values. 
+Obtain the difference and divide by 2*perturb_value. 
+
+how to quanify the difference between the numerical gradient 
+and the analytical gradient
+diff = norm(numgrad-grad)/norm(numgrad+grad);
+
+
+
+
