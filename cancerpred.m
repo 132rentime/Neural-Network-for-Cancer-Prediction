@@ -45,7 +45,8 @@ input_layer = 9;
 hidden_layer = 3;
 output_layer = 1;
 
-[initial_theta] = initializeTheta(input_layer,hidden_layer,output_layer);
+A = load('thetavector.mat');
+initial_theta = A.thetavector;
 
 lambda = 0.1;
 %creating a function handle for the cost function
